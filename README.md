@@ -1,1 +1,2 @@
-# MoviesLibrary
+# MovieLibrary
+Cinema project
