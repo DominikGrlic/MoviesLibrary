@@ -222,7 +222,7 @@ namespace CinemaProject.Data
                     Id = 5,
                     FullName = "James Cameron",
                     Bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                    ProfileImageUrl = "james_cameron.jpg"
+                    ProfileImageUrl = "james_cameron.jpeg"
                 }
             };
 

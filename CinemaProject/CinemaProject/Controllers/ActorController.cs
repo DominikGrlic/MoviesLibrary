@@ -1,21 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CinemaProject.Data;
 using System;
+using CinemaProject.Data.Services;
 
 namespace CinemaProject.Controllers
 {
     public class ActorController : Controller
     {
-        private readonly ApplicationDbContext _context;
-        public ActorController(ApplicationDbContext context)
+        private readonly IActorService _actorService;
+        public ActorController(IActorService actorService)
         {
-            _context = context;
+            _actorService = actorService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data = _context.Actors.ToList();
+            var data = await _actorService.GetAll();
             return View(data);
+        }
+
+        // GET Actor/Create
+        public async Task<IActionResult> Create()
+        {
+
+            return View();
         }
     }
 }
