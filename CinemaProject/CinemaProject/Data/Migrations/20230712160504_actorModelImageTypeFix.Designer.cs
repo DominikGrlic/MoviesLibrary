@@ -4,6 +4,7 @@ using CinemaProject.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CinemaProject.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230712160504_actorModelImageTypeFix")]
+    partial class actorModelImageTypeFix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,6 +42,7 @@ namespace CinemaProject.Data.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("ProfileImageUrl")
+                        .IsRequired()
                         .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
@@ -240,65 +243,65 @@ namespace CinemaProject.Data.Migrations
                             Id = 1,
                             CinemaId = 1,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            EndDate = new DateTime(2023, 7, 22, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1949),
+                            EndDate = new DateTime(2023, 7, 22, 18, 5, 3, 850, DateTimeKind.Local).AddTicks(525),
                             ImageUrl = "deadpool.jpg",
                             MovieCategory = 2,
                             Name = "Deadpool",
                             Price = 32.899999999999999,
                             ProducerId = 1,
-                            StartDate = new DateTime(2023, 7, 12, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1913)
+                            StartDate = new DateTime(2023, 7, 12, 18, 5, 3, 850, DateTimeKind.Local).AddTicks(484)
                         },
                         new
                         {
                             Id = 2,
                             CinemaId = 2,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            EndDate = new DateTime(2023, 7, 27, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1957),
+                            EndDate = new DateTime(2023, 7, 27, 18, 5, 3, 850, DateTimeKind.Local).AddTicks(534),
                             ImageUrl = "fightClub.jpg",
                             MovieCategory = 1,
                             Name = "Fight Club",
                             Price = 39.5,
                             ProducerId = 2,
-                            StartDate = new DateTime(2023, 7, 12, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1955)
+                            StartDate = new DateTime(2023, 7, 12, 18, 5, 3, 850, DateTimeKind.Local).AddTicks(532)
                         },
                         new
                         {
                             Id = 3,
                             CinemaId = 3,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            EndDate = new DateTime(2023, 7, 22, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1961),
+                            EndDate = new DateTime(2023, 7, 22, 18, 5, 3, 850, DateTimeKind.Local).AddTicks(539),
                             ImageUrl = "godFather.jpg",
                             MovieCategory = 9,
                             Name = "God Father",
                             Price = 40.0,
                             ProducerId = 3,
-                            StartDate = new DateTime(2023, 7, 8, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1960)
+                            StartDate = new DateTime(2023, 7, 8, 18, 5, 3, 850, DateTimeKind.Local).AddTicks(537)
                         },
                         new
                         {
                             Id = 4,
                             CinemaId = 4,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            EndDate = new DateTime(2023, 7, 20, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1966),
+                            EndDate = new DateTime(2023, 7, 20, 18, 5, 3, 850, DateTimeKind.Local).AddTicks(544),
                             ImageUrl = "mrMrs.jpg",
                             MovieCategory = 1,
                             Name = "Mr and Mr's Smith",
                             Price = 35.700000000000003,
                             ProducerId = 4,
-                            StartDate = new DateTime(2023, 7, 10, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1964)
+                            StartDate = new DateTime(2023, 7, 10, 18, 5, 3, 850, DateTimeKind.Local).AddTicks(542)
                         },
                         new
                         {
                             Id = 5,
                             CinemaId = 1,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            EndDate = new DateTime(2023, 7, 27, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1970),
+                            EndDate = new DateTime(2023, 7, 27, 18, 5, 3, 850, DateTimeKind.Local).AddTicks(548),
                             ImageUrl = "trainingDay.jpg",
                             MovieCategory = 3,
                             Name = "Training Day",
                             Price = 38.5,
                             ProducerId = 1,
-                            StartDate = new DateTime(2023, 7, 15, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1969)
+                            StartDate = new DateTime(2023, 7, 15, 18, 5, 3, 850, DateTimeKind.Local).AddTicks(546)
                         });
                 });
 

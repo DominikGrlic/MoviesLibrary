@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CinemaProject.Models;
 
@@ -7,10 +8,14 @@ public class Actor
     [Key]
     public int Id { get; set; }
     [Display(Name = "Full name")]
+    [Required]
+    [StringLength(50, MinimumLength = 3)]
     public string FullName { get; set; }
     [Display(Name = "Biography")]
+    [Required]
     public string Bio { get; set; }
     [Display(Name = "Profile picture")]
+    [Column(TypeName ="nvarchar(200)")]
     public string ProfileImageUrl { get; set; }
 
     // relationships 

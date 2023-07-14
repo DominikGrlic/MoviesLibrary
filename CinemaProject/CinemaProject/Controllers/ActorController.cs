@@ -2,6 +2,7 @@
 using CinemaProject.Data;
 using System;
 using CinemaProject.Data.Services;
+using CinemaProject.Models;
 
 namespace CinemaProject.Controllers
 {
@@ -20,10 +21,22 @@ namespace CinemaProject.Controllers
         }
 
         // GET Actor/Create
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
 
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("FullName,ProfileImageUrl,Bio")]Actor actor)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(actor);
+            }
+
+            _actorService.Add(actor);
+            return RedirectToAction("Index");
         }
     }
 }
