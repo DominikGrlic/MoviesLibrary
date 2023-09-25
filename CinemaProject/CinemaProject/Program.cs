@@ -2,6 +2,7 @@ using CinemaProject.Data;
 using CinemaProject.Data.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 
 namespace CinemaProject
 {
@@ -40,6 +41,14 @@ namespace CinemaProject
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            //-- postavke za euro kao valutu aplikacije
+
+            if(Thread.CurrentThread.CurrentCulture.Name != "de-DE")
+            {
+                CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture("de-DE");
+                CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.CreateSpecificCulture("de-DE");
+            }
 
             app.UseRouting();
 

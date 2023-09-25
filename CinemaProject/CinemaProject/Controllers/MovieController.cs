@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CinemaProject.Data;
 using System;
+using Microsoft.EntityFrameworkCore;
 
 namespace Movie_project.Controllers
 {
@@ -12,9 +13,9 @@ namespace Movie_project.Controllers
             _context = context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data = _context.Movies.ToList();
+            var data = await _context.Movies.Include(m => m.Cinema).OrderBy(m => m.Name).ToListAsync();
             return View(data);
         }
     }
