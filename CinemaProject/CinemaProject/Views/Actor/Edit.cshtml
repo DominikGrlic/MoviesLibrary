@@ -10,21 +10,25 @@
     </div>
 }
 
- 
+@* TODO: Dodati preview slike na editu *@
+
+
 <div class="row-text">
     <div class="col-md-8 offset-2">
-        <h2 class="font-monospace">CREATE A NEW ACTOR</h2>
+        <h2 class="font-monospace">UPDATE ACTOR</h2>
         <div class="row">
             <div class="col-md-8 offset-2">
-                <form asp-action="Create" enctype="multipart/form-data">
+                <div class="col-md-6 mx-auto">
+                    <img class="rounded-circle" src="~/Images/Actors/@Model.ProfileImageUrl" width="100%" alt="No existing image!">
+                </div>
+                <form asp-action="Edit" enctype="multipart/form-data">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group text-center">
                         <img id="ProfileImageUrl" />
                     </div>
                     <div class="form-group">
-                        <label asp-for="ProfileImageUrl" class="control-label">Select a file</label>
-                        <input type="file" asp-for="ProfileImageUrl" class="form-control" />
-                        <span asp-validation-for="ProfileImageUrl" class="text-danger"></span>
+                        <label class="control-label">Upload new image</label>
+                        <input type="file" name="newImage" class="form-control" />
                     </div>
                     <div class="form-group">
                         <label asp-for="FullName" class="control-label"></label>
@@ -40,7 +44,7 @@
                     <partial name="~/Views/Shared/_SelectMoviePartial.cshtml" />
 
                     <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-outline-success float-end" />
+                        <input type="submit" value="Update" class="btn btn-outline-success float-end" />
                         <a class="btn btn-outline-secondary" asp-action="Index">Show all</a>
                     </div>
                 </form>
@@ -48,18 +52,3 @@
         </div>
     </div>
 </div>
-
-@* @section Scripts{
-    <script>
-
-        $(document).ready(function () {
-            var output = document.getElementById('ProfilePicturePreview');
-            output.src = $("#ProfileImageUrl").val();
-        })
-
-        $("#ProfileImageUrl").on("change", function () {
-            var output = document.getElementById('ProfilePicturePreview');
-            output.src = $(this).val();
-        })
-    </script>
-} *@

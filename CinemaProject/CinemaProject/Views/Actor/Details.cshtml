@@ -1,0 +1,34 @@
+﻿@using CinemaProject.Data
+@model Actor
+
+
+    <div class="card mb-3 mx-auto" style="max-width: 1200px;">
+        <div class="row g-0">
+            <div class="col-md-12">
+                <div class="card-header text-white bg-info">
+                    <p class="card-text">
+                        <h5 class="card-title font-monospace">
+                            @Model.FullName
+                            <a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
+                        </h5>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="~/Images/Actors/@Model.ProfileImageUrl" width="100%" alt="No existing image!">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <p class="card-text">@Model.FullName</p>
+                    <p class="card-text">@Model.Bio</p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card-footer">
+                    <p class="card-text text-center">
+                        <a class="btn btn-primary btn-lg btn-block" asp-controller="Actor" asp-action="Edit" asp-route-id="@Model.Id"><i class="bi bi-pencil-square"></i>Edit</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>

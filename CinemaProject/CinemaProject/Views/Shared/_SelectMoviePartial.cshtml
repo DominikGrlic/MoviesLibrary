@@ -1,0 +1,17 @@
+﻿@using CinemaProject.Data
+
+@inject ApplicationDbContext _context;
+
+<div class="form-group">
+    <label class="control-label">
+        Select movie
+    </label>
+    <select class="form-control" name="movieId">
+        @foreach(var movie in _context.Movies.ToList())
+        {
+            <option value="@movie.Id">
+                @movie.Name
+            </option>
+        }
+    </select>
+</div>

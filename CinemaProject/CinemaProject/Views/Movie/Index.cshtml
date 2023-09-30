@@ -10,11 +10,11 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-12">
-                        <div class="card-header text-white bg-info">
+                        <div class="card-header text-white bg-dark">
                             <p class="card-text">
-                                <h5 class="card-title">
+                                <h5 class="card-title font-monospace">
                                     @item.Name
-                                    <a class="text-white float-right"><i class="bi bi-pencil-square"></i></a>
+                                    <a class="text-white float-right"></a>
                                 </h5>
                             </p>
                         </div>
@@ -48,7 +48,7 @@
                         <div class="card-footer">
                             <p class="card-text">
                                 <a class="btn btn-outline-primary float-end"><i class="bi bi-eye-fill"></i>Show details</a>
-                                <a class="btn btn-success text-white"><i class="bi bi-cart-plus">Add to cart (Price @item.Price.ToString("C2"))</i></a>
+                                <a class="btn btn-success text-white"><i class="bi bi-cart-plus">Buy (@item.Price.ToString("C2"))</i></a>
                             </p>
                         </div>
                     </div>

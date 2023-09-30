@@ -21,6 +21,7 @@ namespace CinemaProject
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            //-- Service configuration
             builder.Services.AddScoped<IActorService, ActorService>();
 
             builder.Services.AddControllersWithViews();

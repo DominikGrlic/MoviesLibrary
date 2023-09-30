@@ -139,7 +139,6 @@ namespace CinemaProject.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Logo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -207,7 +206,6 @@ namespace CinemaProject.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("MovieCategory")
@@ -240,65 +238,65 @@ namespace CinemaProject.Data.Migrations
                             Id = 1,
                             CinemaId = 1,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            EndDate = new DateTime(2023, 7, 22, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1949),
+                            EndDate = new DateTime(2023, 10, 10, 13, 40, 37, 538, DateTimeKind.Local).AddTicks(8990),
                             ImageUrl = "deadpool.jpg",
                             MovieCategory = 2,
                             Name = "Deadpool",
                             Price = 32.899999999999999,
                             ProducerId = 1,
-                            StartDate = new DateTime(2023, 7, 12, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1913)
+                            StartDate = new DateTime(2023, 9, 30, 13, 40, 37, 538, DateTimeKind.Local).AddTicks(8953)
                         },
                         new
                         {
                             Id = 2,
                             CinemaId = 2,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            EndDate = new DateTime(2023, 7, 27, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1957),
+                            EndDate = new DateTime(2023, 10, 15, 13, 40, 37, 538, DateTimeKind.Local).AddTicks(8998),
                             ImageUrl = "fightClub.jpg",
                             MovieCategory = 1,
                             Name = "Fight Club",
                             Price = 39.5,
                             ProducerId = 2,
-                            StartDate = new DateTime(2023, 7, 12, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1955)
+                            StartDate = new DateTime(2023, 9, 30, 13, 40, 37, 538, DateTimeKind.Local).AddTicks(8996)
                         },
                         new
                         {
                             Id = 3,
                             CinemaId = 3,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            EndDate = new DateTime(2023, 7, 22, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1961),
+                            EndDate = new DateTime(2023, 10, 10, 13, 40, 37, 538, DateTimeKind.Local).AddTicks(9002),
                             ImageUrl = "godFather.jpg",
                             MovieCategory = 9,
                             Name = "God Father",
                             Price = 40.0,
                             ProducerId = 3,
-                            StartDate = new DateTime(2023, 7, 8, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1960)
+                            StartDate = new DateTime(2023, 9, 26, 13, 40, 37, 538, DateTimeKind.Local).AddTicks(9000)
                         },
                         new
                         {
                             Id = 4,
                             CinemaId = 4,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            EndDate = new DateTime(2023, 7, 20, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1966),
+                            EndDate = new DateTime(2023, 10, 8, 13, 40, 37, 538, DateTimeKind.Local).AddTicks(9007),
                             ImageUrl = "mrMrs.jpg",
                             MovieCategory = 1,
                             Name = "Mr and Mr's Smith",
                             Price = 35.700000000000003,
                             ProducerId = 4,
-                            StartDate = new DateTime(2023, 7, 10, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1964)
+                            StartDate = new DateTime(2023, 9, 28, 13, 40, 37, 538, DateTimeKind.Local).AddTicks(9005)
                         },
                         new
                         {
                             Id = 5,
                             CinemaId = 1,
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            EndDate = new DateTime(2023, 7, 27, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1970),
+                            EndDate = new DateTime(2023, 10, 15, 13, 40, 37, 538, DateTimeKind.Local).AddTicks(9012),
                             ImageUrl = "trainingDay.jpg",
                             MovieCategory = 3,
                             Name = "Training Day",
                             Price = 38.5,
                             ProducerId = 1,
-                            StartDate = new DateTime(2023, 7, 15, 19, 6, 26, 161, DateTimeKind.Local).AddTicks(1969)
+                            StartDate = new DateTime(2023, 10, 3, 13, 40, 37, 538, DateTimeKind.Local).AddTicks(9010)
                         });
                 });
 
@@ -319,7 +317,6 @@ namespace CinemaProject.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProfileImageUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

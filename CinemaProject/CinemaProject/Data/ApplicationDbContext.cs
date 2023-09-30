@@ -29,9 +29,15 @@ namespace CinemaProject.Data
                 am.MovieId
             });
 
-            modelBuilder.Entity<Actor_Movie>().HasOne(am => am.Movie).WithMany(am => am.Actor_Movies).HasForeignKey(am => am.MovieId);
+            modelBuilder.Entity<Actor_Movie>()
+                .HasOne(am => am.Movie)
+                .WithMany(am => am.Actor_Movies)
+                .HasForeignKey(am => am.MovieId);
 
-            modelBuilder.Entity<Actor_Movie>().HasOne(am => am.Actor).WithMany(am => am.Actor_Movies).HasForeignKey(am => am.ActorId);
+            modelBuilder.Entity<Actor_Movie>()
+                .HasOne(am => am.Actor)
+                .WithMany(am => am.Actor_Movies)
+                .HasForeignKey(am => am.ActorId);
 
             // data seeding
             List<Actor> actors = new List<Actor>()

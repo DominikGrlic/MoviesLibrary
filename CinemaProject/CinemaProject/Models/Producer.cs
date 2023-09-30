@@ -12,7 +12,7 @@ public class Producer
     [Display(Name = "Biography")]
     public string Bio { get; set; }
     [Display(Name = "Profile image")]
-    public string ProfileImageUrl { get; set; }
+    public string? ProfileImageUrl { get; set; }
 
     // relationships
     public List<Movie> Movies { get; set; }
